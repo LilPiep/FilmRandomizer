@@ -8,7 +8,7 @@ bot.commands = new Discord.Collection();
 bot.login(config.token);
 loadCommands(bot);
 
-bot.on("messageCreate", async message => {
+bot.on("message", async (message) => {
     
     if(message.content === "!test") return bot.commands.get("test").run(bot, message)
 })
